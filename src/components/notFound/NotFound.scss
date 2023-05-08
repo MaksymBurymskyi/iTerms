@@ -1,0 +1,24 @@
+@import "../../App.scss";
+
+.notFound {
+  width: 100vw;
+  height: 100vh;
+  padding: 35% 5px 0px;
+  text-align: center;
+  background: url(../../../public/img/404.svg) center 31% / auto 380px no-repeat,
+    url(../../../public/img/lines404.svg) center top / contain no-repeat,
+    url(../../../public/img/image-bgd404.svg) center top/ cover no-repeat;
+
+  h2 {
+    font-size: 48px;
+    line-height: 120%;
+    padding: 8px;
+  }
+
+  p {
+    width: 481px;
+    color: $second-text-color;
+    padding: 8px;
+    margin: 0 auto 40px;
+  }
+}

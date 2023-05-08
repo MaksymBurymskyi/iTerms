@@ -1,0 +1,28 @@
+.selector {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  position: relative;
+
+  &::after {
+    content: url("../../../public/img/suffix-bottom-icon.png");
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+  select {
+    display: block;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 50px;
+    // height: 48px;
+    text-transform: capitalize;
+  }
+}

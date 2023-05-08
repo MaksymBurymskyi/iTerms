@@ -1,0 +1,29 @@
+@import "./../../App.scss";
+
+.registration {
+  background: url(../../../public/img/sign-up-bgd.png) no-repeat center bottom /
+    100% 100%;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 130px 5px 5px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 70px;
+
+    &-form {
+      background: $white-color;
+      width: 478px;
+      padding: 45px 0px 0 94px;
+      border-radius: 8px 0 0 8px;
+    }
+
+    &-canvas {
+      background: $main-color;
+      width: calc(100% - 478px);
+      border-radius: 0 8px 8px 0;
+    }
+  }
+}

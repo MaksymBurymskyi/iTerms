@@ -1,0 +1,31 @@
+$main-text-color: #1d212a;
+$second-text-color: #565a65;
+$extra-text-color: #b6bfd9;
+$placeholder-color: #dadfeb;
+$first-link-color: #897eff;
+$main-color: #8770ff;
+$color: #8870ff1a;
+$main-color--hover: #a594ff;
+$white-color: #ffffff;
+$activeColor: #32d989;
+
+body {
+  font-family: "Poppins", "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: $main-text-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.linkActive {
+  color: $main-color;
+}

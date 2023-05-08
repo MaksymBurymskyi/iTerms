@@ -1,0 +1,38 @@
+@import "../../App.scss";
+
+.button {
+  border: none;
+  border-radius: 8px;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+
+  // color: $white-color;
+  // background: $main-color;
+  // background: $activeColor;
+
+  & img {
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    background: $main-color--hover;
+  }
+}
+
+.btnIcon {
+  width: 22px;
+  height: 22px;
+  fill: $main-color;
+}
+
+.mainBtn {
+  color: $white-color;
+  background: $main-color;
+}
+
+.lightBtn {
+  color: $white-color;
+  background: $main-color;
+}

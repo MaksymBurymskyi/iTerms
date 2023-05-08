@@ -1,0 +1,94 @@
+@import "./../../../App.scss";
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+  color: $second-text-color;
+
+  h2 {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 400;
+    color: $main-text-color;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 18px 0 20px;
+    width: 250px;
+
+    label {
+      font-family: "Open Sans";
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+      margin: 30px 0 8px;
+    }
+
+    input {
+      all: unset;
+      border-bottom: 1px solid $extra-text-color;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $placeholder-color;
+      }
+    }
+
+    &-text {
+      font-size: 10px;
+      line-height: 120%;
+      margin: 21px 0 12px;
+
+      & a {
+        color: $first-link-color;
+      }
+    }
+  }
+
+  &__inpIndicator {
+    font-size: 14px;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    border-radius: 6px;
+    background: red;
+  }
+
+  &__btns {
+    margin: 24px 0 0;
+
+    h3 {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 120%;
+    }
+
+    div {
+      font-family: "Open Sans";
+      display: flex;
+      flex-direction: row;
+      padding: 8px 0 0;
+      gap: 8px;
+    }
+
+    button {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    &-text {
+      margin: 16px 0 45px;
+
+      & a {
+        color: $main-color;
+      }
+    }
+  }
+}
