@@ -3,16 +3,20 @@
 .notFound {
   width: 100vw;
   height: 100vh;
-  padding: 35% 5px 0px;
+  padding: 17vh 5px 0px;
   text-align: center;
-  background: url(../../../public/img/404.svg) center 31% / auto 380px no-repeat,
-    url(../../../public/img/lines404.svg) center top / contain no-repeat,
-    url(../../../public/img/image-bgd404.svg) center top/ cover no-repeat;
+  background: url(../../../public/img/lines404.svg) center top / contain
+      no-repeat,
+    url(../../../public/img/image-bgd404.svg) center top/ 100% no-repeat;
+
+  img {
+    height: 39vh;
+  }
 
   h2 {
     font-size: 48px;
     line-height: 120%;
-    padding: 8px;
+    padding: 50px 8px 8px;
   }
 
   p {

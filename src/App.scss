@@ -1,19 +1,23 @@
 $main-text-color: #1d212a;
+$activeColor: #32d989;
 $second-text-color: #565a65;
+$main-color: #8770ff;
+$lightMain-color: #8870ff1a;
+$first-link-color: #897eff;
+$main-color--hover: #a594ff;
 $extra-text-color: #b6bfd9;
 $placeholder-color: #dadfeb;
-$first-link-color: #897eff;
-$main-color: #8770ff;
-$color: #8870ff1a;
-$main-color--hover: #a594ff;
+$background-color: #e5e5e5;
+$light-gray-color: #e7e9ed;
 $white-color: #ffffff;
-$activeColor: #32d989;
+$second-font: "Open Sans";
 
 body {
   font-family: "Poppins", "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  line-height: 150%;
   color: $main-text-color;
 }
 

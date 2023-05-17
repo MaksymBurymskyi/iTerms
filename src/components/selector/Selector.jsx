@@ -1,11 +1,14 @@
 import './Selector.scss';
+
 import React, { useState } from "react";
 
 
 function Selector({ options, label }) {
 
+  // хук використовується для зберігання поточної опції тегу select
   const [currentOption, setCurrentOption] = useState(options[0]);
 
+  // функція виконує обробку події зміни опцій селектору та зберігає поточний стан опції до стейту
   const handleOptionChange = (option) => {
     setCurrentOption(option);
   };

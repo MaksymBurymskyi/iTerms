@@ -1,19 +1,17 @@
 import './SignIn.scss';
 import Button from '../../button/Button';
-import styles from "../../button/Button.scss";
-import { ReactComponent as IconGoogle } from '../../iconsForComponents/google-icon.svg';
-import { ReactComponent as IconFacebook } from '../../iconsForComponents/facebook-icon.svg';
-
+import { ReactComponent as IconGoogle } from '../../imgsForComponents/google-icon.svg';
+import { ReactComponent as IconFacebook } from '../../imgsForComponents/facebook-icon.svg';
 
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
-import cn from "classnames";
 
 function SignIn() {
 
- const buttonClasses = cn('lightBtn');
-
+  // Валідація виконується за допомогою бібліотеки "react-hook-form"
   const { register, handleSubmit, formState: { errors } } = useForm();
+
+  // При натисканні на кнопку type="submit" викликається функція setTimeout для запобігання випадкового подвійного надсилання форми
   const onSubmit = data => {
     setTimeout(() => {
       console.log("data:", JSON.stringify(data, null, 2));
@@ -25,8 +23,8 @@ function SignIn() {
     <div className="signInBlock__signInWith">
       <p>Sign in with</p>
       <div>
-        <Button className={buttonClasses} style={{ padding: "12px 21px", fontSize: "16px", lineHeight: "24px" }} icon={<IconGoogle className='btnIcon' />} >Google</Button>
-        <Button className={styles.lightBtn} style={{ padding: "12px", fontSize: "16px", lineHeight: "24px" }} icon={<IconFacebook className='btnIcon' />} >Facebook</Button>
+        <Button addClass={'lightBtn'} style={{ padding: "12px 21px" }} icon={<IconGoogle className='btnIcon' />} to={'/GoogleLogin'}>Google</Button>
+        <Button addClass={'lightBtn'} style={{ padding: "12px"}} icon={<IconFacebook className='btnIcon' />} to={'/FacebookLogin'}>Facebook</Button>
       </div>
       <span>or</span>
     </div>
@@ -41,7 +39,7 @@ function SignIn() {
       <input type="password" id="password" placeholder='At least 8 characters long' {...register("password", { required: 'password is required', minLength: {value: 8, message: "password is too short" }})}  aria-invalid={errors.password ? "true" : "false"} />
       {errors.password && <div className="signInBlock__inpIndicator" role="alert">{errors.password?.message}</div>}
 
-      <Button style={{ padding: "12px 98px", fontSize: "16px", lineHeight: "150%" }} >Sign in</Button>
+      <Button addClass={'mainBtn'} style={{ padding: "12px 98px" }} >Sign in</Button>
       
     </form>
     <div className="signInBlock__redirect">Don't have an account? <Link to={'/signup'}>Sign up</Link> </div>

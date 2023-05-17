@@ -33,19 +33,18 @@
       &::placeholder {
         font-weight: 400;
         font-size: 16px;
-        line-height: 150%;
         color: $placeholder-color;
       }
     }
+  }
 
-    &-text {
-      font-size: 10px;
-      line-height: 120%;
-      margin: 21px 0 12px;
+  &__formText {
+    font-size: 10px;
+    line-height: 120%;
+    margin: 21px 0 12px;
 
-      & a {
-        color: $first-link-color;
-      }
+    & a {
+      color: $first-link-color;
     }
   }
 
@@ -82,13 +81,13 @@
       gap: 4px;
       align-items: center;
     }
+  }
 
-    &-text {
-      margin: 16px 0 45px;
+  &__btnsText {
+    margin: 16px 0 45px;
 
-      & a {
-        color: $main-color;
-      }
+    & a {
+      color: $main-color;
     }
   }
 }

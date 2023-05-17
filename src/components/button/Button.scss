@@ -6,10 +6,10 @@
   text-transform: capitalize;
   cursor: pointer;
   text-align: center;
+  transition: background 0.4s;
 
-  // color: $white-color;
-  // background: $main-color;
-  // background: $activeColor;
+  font-size: 16px;
+  line-height: 24px;
 
   & img {
     width: 24px;
@@ -33,6 +33,6 @@
 }
 
 .lightBtn {
-  color: $white-color;
-  background: $main-color;
+  color: $second-text-color;
+  background: $lightMain-color;
 }

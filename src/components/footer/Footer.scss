@@ -1,0 +1,131 @@
+@import "../../App.scss";
+
+.footer {
+  width: 100%;
+  color: $white-color;
+  background: url(../../../public/img/main-page-footer-img/footer-bgd.svg)
+    no-repeat center 60px / cover $background-color;
+
+  &__conversion {
+    background: $white-color;
+    text-align: center;
+    border-radius: 8px;
+    padding: 60px 0;
+  }
+
+  &__conversionUpTitle {
+    color: $extra-text-color;
+    font-weight: 500;
+    font-size: 18px;
+    width: 310px;
+    margin: 0 auto 16px;
+  }
+
+  &__conversionTitle {
+    color: $main-text-color;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 120%;
+    width: 583px;
+    margin: auto;
+  }
+
+  &__conversionSubTitle {
+    color: $second-text-color;
+    font-family: $second-font;
+    margin: 16px auto 48px;
+    width: 406px;
+  }
+
+  &__conversionLink {
+    color: $main-text-color;
+    transition: color 0.4s;
+    margin-left: 32px;
+    position: relative;
+
+    &::after {
+      content: url("../../../public/img/suffix-right-icon.png");
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__mainLinks {
+    display: flex;
+    padding: 120px 0 48px;
+  }
+
+  &__textBlock {
+    h3 {
+      font-weight: 300;
+      font-size: 38px;
+      line-height: 120%;
+    }
+
+    p {
+      max-width: 244px;
+      font-family: $second-font;
+      margin-top: 16px;
+    }
+  }
+
+  &__textBlock,
+  &__infoLinks span {
+    width: 38%;
+  }
+
+  &__linksBlock {
+    padding-left: 13px;
+
+    h4 {
+      font-size: 24px;
+      line-height: 120%;
+      font-weight: 300;
+    }
+  }
+
+  &__infoLinks {
+    display: flex;
+    line-height: 150%;
+    border-top: solid 1px $white-color;
+
+    span {
+      padding: 13px 0;
+    }
+
+    li {
+      padding: 13px;
+    }
+  }
+
+  &__linkList {
+    list-style: none;
+    padding: 0;
+
+    li {
+      a {
+        color: $white-color;
+      }
+    }
+  }
+
+  &__linkList--column {
+    margin-top: 24px;
+    width: 208px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__linkList--row {
+    display: flex;
+  }
+}
