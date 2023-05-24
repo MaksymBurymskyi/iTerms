@@ -5,6 +5,9 @@ import RegisterPage from './components/registrationPages/registerPage/RegisterPa
 import LogInPage from './components/registrationPages/logInPage/LogInPage';
 import Footer from './components/footer/Footer';
 import MainPage from './components/mainPage/MainPage';
+// eslint-disable-next-line no-unused-vars
+import i18n from "./_i18n/i18n";
+
 
 import WebFont from "webfontloader";
 import { useEffect } from "react";
@@ -15,17 +18,12 @@ import {
   Route, 
   useLocation,
   Navigate 
-  // Outlet,
-  // Switch,
-  // Link, 
-  // NavLink, 
-  // useParams,
-  // useNavigate
 } from 'react-router-dom';
-
-
+import { useSelector } from "react-redux";
 
 function App() {
+
+  const language = useSelector((state) => state.language);
 
   //хук виконує завантаження шрифтів
   useEffect(() => {
@@ -35,6 +33,14 @@ function App() {
       },
     });
   }, []);
+
+  useEffect(() => {
+    onChangeLanguage(language)
+  }, [language]);
+
+  function onChangeLanguage(language) {
+    i18n.changeLanguage(language);
+  }
  
   function Contacts() {
     return <div>Contacts</div>
@@ -42,7 +48,7 @@ function App() {
   
   //функція повертає футер за виключенням вказаних шляхів
   function FooterComponent() {
-  const location = useLocation();
+    const location = useLocation();
 
     return (location.pathname === '/signup' || location.pathname === '/signin' || location.pathname === '/404') ? null : <Footer />
   }
@@ -56,6 +62,7 @@ function App() {
         <Route path='/404' element={<NotFound />} />
         <Route path='/signup' element={<RegisterPage />} />
         <Route path='/signin' element={<LogInPage />} />
+        <Route exact path='/#mainSection' element={<MainPage />} />
         <Route exact path='/' element={<MainPage />} />
         <Route path='*' element={<Navigate to='/404' />} />
         

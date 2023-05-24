@@ -1,0 +1,34 @@
+@import "../../App.scss";
+
+.btnsBlock {
+  display: flex;
+  font-size: 16px;
+
+  &__link {
+    color: $main-text-color;
+    transition: color 0.4s;
+    position: relative;
+
+    &::after {
+      content: url("../../../public/img/suffix-right-icon.png");
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}

@@ -1,6 +1,7 @@
 $main-text-color: #1d212a;
-$activeColor: #32d989;
+$main-link-color: #32d989;
 $second-text-color: #565a65;
+$third-text-color: #646464;
 $main-color: #8770ff;
 $lightMain-color: #8870ff1a;
 $first-link-color: #897eff;
@@ -19,6 +20,7 @@ body {
   font-size: 16px;
   line-height: 150%;
   color: $main-text-color;
+  overflow-x: hidden;
 }
 
 a {
@@ -28,6 +30,11 @@ a {
 .container {
   max-width: 1110px;
   margin: auto;
+  // position: relative;
+}
+
+.linkStyle {
+  color: $main-link-color;
 }
 
 .linkActive {
