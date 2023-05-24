@@ -1,0 +1,64 @@
+{
+  "header":{
+    "header__menu":{
+      "to-main": "Generate",
+      "to-contacts": "Contact us",
+      "to-pricing": "Pricing",
+      "to-blog": "Blog"
+    },
+    "header__buttons":{
+      "to-signin": "Log in",
+      "to-signup": "Sign up"
+    }
+  },
+  "mainPage":{
+    "mainSection":{
+      "heroText__upTitle": "Powered By AI",
+      "heroText__title": "The smartest, fastest way to Legal Aggrements",
+      "heroText__subTitle": ["Generate your", "Privacy Policy, Terms of Use", "or", "Cookie Policy", "for", "free"],
+      "BtnsBlock": {
+        "btnText": "Generate for free",
+        "linkText": "Learn more"
+      }
+    },
+    "possibilities":{
+      "upTitle": "Discover Possibilities",
+      "title": "Streamline Your Purpose with AI",
+      "possibilities__text": "Streamline cost-effective solutions for your business. Generate legally compliant documents seamlessly with customizable agreements and policies for your website or mobile app anytime, anywhere with iTerms.",
+      "featureList": ["Unlimited downloads for 9.95 a one-time fee", "All legal agreements confirmed by a practicing lawyer", "EU/US and main privacy laws covered", "Automatic legal updates powered by AI", "Industry-leading competitive pricing", "Securely host your policies on our platform", "Easy embed policy on your domain", "Suitable for most Web/Mobile apps"],
+      "BtnsBlock": {
+        "btnText": "Generate",
+        "linkText": "Learn more"
+      }
+    }
+  },
+  "footer": {
+    "footer__conversionUpTitle": "Get Started Within Minutes",
+    "footer__conversionTitle": "Are You Ready to Protect Your Business?",
+    "footer__conversionSubTitle": "Sign up for our account packages and start generating legal agreements suited to your business needs.",
+    "BtnsBlock": {
+      "btnText": "Generate for free",
+      "linkText": "Learn more"
+    },
+    "footer__textBlock": "More than 140,000 businesses use iTerms. Join our community.",
+    "footer__linksBlock": {
+      "Company": "Company",
+      "Products": "Products",
+      "Support": "Support"
+    },
+    "footer__linkList": {
+      "Company": ["How It Works", "Reviews", "Contact us", "Blog"],
+      "Products": ["Solutions", "Trust & Safety", "Payment", "Help"],
+      "Support": ["Help", "Pricing", "Payment", "Help"]
+    },
+    "footer__infoLinks": {
+      "rights": "All rights reserved",
+      "linkList": {
+        "to-pricing": "Terms & Conditions",
+        "to-policy": "Privacy Policy",
+        "to-disclaimer": "Disclaimer"
+      }
+    }
+  }
+ 
+}

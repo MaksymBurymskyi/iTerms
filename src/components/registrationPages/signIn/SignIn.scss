@@ -85,9 +85,9 @@
     height: 20px;
     text-align: center;
     margin: auto;
-    color: white;
+    color: red;
     border-radius: 6px;
-    background: red;
+    background: $main-color--hover;
   }
 
   &__redirect {

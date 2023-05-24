@@ -3,8 +3,8 @@
 .footer {
   width: 100%;
   color: $white-color;
-  background: url(../../../public/img/main-page-footer-img/footer-bgd.svg)
-    no-repeat center 60px / cover $background-color;
+  background: url(../../../public/img/footer-bgd.svg) no-repeat center 60px /
+    cover $background-color;
 
   &__conversion {
     background: $white-color;
@@ -127,5 +127,20 @@
 
   &__linkList--row {
     display: flex;
+  }
+
+  .langSelector {
+    &::after {
+      content: url("../../../public/img/suffix-bottom-icon--white.svg");
+      right: 10px;
+    }
+
+    select {
+      color: $white-color;
+
+      option {
+        color: $main-text-color;
+      }
+    }
   }
 }
