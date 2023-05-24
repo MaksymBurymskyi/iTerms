@@ -1,18 +1,36 @@
 import "./Header.scss";
-import Selector from "../selector/Selector";
+// import Selector from "../selector/Selector";
+import LanguageSelector from "../languageSelector/LanguageSelector";
 import Button from "../button/Button";
+// eslint-disable-next-line no-unused-vars
+import i18n from "../../_i18n/i18n";
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+
 
 export default function Header() {
-
-  //масив мов на сторінці, передається до компоненту вибору мови
-  const languages = ['en', 'uk'];
   
   //хуки зберігають стан відображення і положення хедеру
   const [hide, setHide] = useState(false);
-  const [onTopPoxition, setOnTopPoxition] = useState(true)
+  const [onTopPosition, setOnTopPosition] = useState(true)
+
+  // хук для відображення тексту залежно від обраної мови
+  const [t] = useTranslation(["translation"]);
+
+  // хук для відправки значення обраної мови до глобального сховища
+  const dispatchFunc = useDispatch();
+  // отримання поточної встановленої мови зі сховища
+  const currLanguage = useSelector((state) => state.language);
+  // стан для відображення поточної мови у компоненті
+  const [currLang, setCurrLang] = useState('en')
+
+  // хук керування станом поточної мови
+  useEffect(() => {
+    setCurrLang(currLanguage)
+  }, [currLanguage]);
 
   //хук відповідає за відображення хедеру. Приховує при скролі вниз і показує при скролі уверх
   useEffect(() => {
@@ -31,7 +49,7 @@ export default function Header() {
       }
 
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      window.pageYOffset > 15 ? setOnTopPoxition(false) : setOnTopPoxition(true);
+      window.pageYOffset > 15 ? setOnTopPosition(false) : setOnTopPosition(true);
     };
   
     window.addEventListener("scroll", handleScroll);
@@ -39,25 +57,51 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  //масив мов на сторінці, передається до компоненту вибору мови для відображення значень
+  const languages = ["en", "uk"];
+  
+
+  // функція зміни мови, керує поведінкою useDispatch для зміни стану у сховищі
+  function onChangeLanguage(language) {
+    if (language === "uk") {
+      dispatchFunc({ type: "setUk" });  
+    } else {
+      dispatchFunc({ type: "setEn" }); 
+    }
+  }
+
   return <>
-    <header className={`header ${hide && "invisible"} ${!onTopPoxition && "notInTop"}`}>
+    <header className={`header ${hide && "invisible"} ${!onTopPosition && "notInTop"}`}>
       <div className="container">
         <div className="header__logo">
-          <NavLink  to="/">iTerms </NavLink>
+          <Link  to="/#mainSection">iTerms </Link>
         </div>
         <nav className="header__menu">
-          <NavLink to="/">Generate</NavLink>
-          <NavLink to="/contacts">Contact us</NavLink>
-          <NavLink to="/pricing">Pricing</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
+          <NavLink className={({ isActive }) => isActive ? "menuLinkActive" : ""} to="/">
+            {t('header.header__menu.to-main')}
+          </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "menuLinkActive" : ""} to="/contacts">
+            {t('header.header__menu.to-contacts')}
+          </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "menuLinkActive" : ""} to="/pricing">
+            {t('header.header__menu.to-pricing')}
+          </NavLink>
+          <NavLink className={({ isActive }) => isActive ? "menuLinkActive" : ""} to="/blog">
+            {t('header.header__menu.to-blog')}
+          </NavLink>
         </nav>
-        <Selector
-          label={''}
-          options={languages}
+        <LanguageSelector
+          currLang={ currLang }
+          options={ languages }
+          changeOption={ onChangeLanguage }
         />
         <div className="header__buttons">
-          <NavLink to="/signin">Log in</NavLink>
-          <Button addClass={'mainBtn'} style={{ padding: "12px 40px" }} to={'/signup'}>Sign up</Button>
+          <Link to="/signin">
+            {t('header.header__buttons.to-signin')}
+          </Link>
+          <Button addClass={'mainBtn'} style={{ padding: "12px 40px" }} to={'/signup'}>
+            {t('header.header__buttons.to-signup')}
+          </Button>
         </div>
       </div>
     </header>

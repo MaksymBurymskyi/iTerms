@@ -51,12 +51,12 @@
   &__inpIndicator {
     font-size: 14px;
     width: 100%;
-    height: 20px;
+    height: 24px;
     text-align: center;
     margin: auto;
-    color: white;
-    border-radius: 6px;
-    background: red;
+    color: red;
+    border-radius: 0 0 6px 6px;
+    background: $main-color--hover;
   }
 
   &__btns {

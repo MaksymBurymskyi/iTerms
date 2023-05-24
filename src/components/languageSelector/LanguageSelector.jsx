@@ -1,6 +1,6 @@
-import './Selector.scss';
+import './LanguageSelector.scss';
 
-function Selector({ options, label, changeOption }) {
+export default function LanguageSelector({ options, currLang, changeOption }) {
 
   // функція виконує обробку події зміни опцій селектору та зберігає поточний стан опції до стейту
   const handleOptionChange = (option) => {
@@ -8,9 +8,8 @@ function Selector({ options, label, changeOption }) {
   };
 
   return (
-    <div className="selector">
-      <span>{ label }</span>
-      <select  onChange={ (ev=>handleOptionChange(ev.target.value)) }>
+    <div className="langSelector">
+      <select value={currLang} onChange={ (ev=>handleOptionChange(ev.target.value)) }>
         { options.map((option) => (
           <option key={ option } value={ option }>
             { option }
@@ -20,5 +19,3 @@ function Selector({ options, label, changeOption }) {
     </div>
   );
 }
-
-export default Selector;

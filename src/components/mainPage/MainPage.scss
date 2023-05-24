@@ -1,3 +1,141 @@
-.main {
-  margin-bottom: 200px;
+@import "../../App.scss";
+
+.mainPage {
+  background: url(../../../public/img/hero-image-bgd.svg) no-repeat center top /
+    cover $background-color;
+
+  &__upTitle {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    color: $extra-text-color;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 120%;
+    margin: 16px 0;
+  }
+}
+
+.mainSection {
+  height: 920px;
+  position: relative;
+}
+
+.heroImages {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+  }
+
+  &__items:nth-child(1) {
+    top: 160px;
+    right: 0;
+    transform: translateX(29vw);
+    z-index: 0;
+  }
+  &__items:nth-child(2) {
+    top: 207px;
+    transform: translateX(-19vw);
+    z-index: 1;
+  }
+  &__items:nth-child(3) {
+    top: 499px;
+    transform: translateX(-15vw);
+    z-index: 1;
+  }
+  &__items:nth-child(4) {
+    top: 499px;
+    transform: translateX(73vw);
+    z-index: 2;
+  }
+  &__items:nth-child(5) {
+    top: 530px;
+    transform: translateX(38vw);
+    z-index: 2;
+  }
+  &__items:nth-child(6) {
+    top: 670px;
+    transform: translateX(7vw);
+    z-index: 2;
+  }
+  &__items:nth-child(7) {
+    top: 425px;
+    transform: translateX(1vw);
+    z-index: 2;
+  }
+}
+
+.heroText {
+  padding: 200px 0 381px;
+  width: 438px;
+  position: absolute;
+  left: calc(50% - 555px);
+  top: 0;
+  z-index: 9;
+
+  &__subTitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 120%;
+    color: $third-text-color;
+    margin: 0 0 41px 0;
+
+    &--highlighted {
+      font-weight: 600;
+    }
+  }
+}
+
+.possibilities {
+  &__wrapper {
+    background: url(../../../public/img/ai-text.svg) top center no-repeat;
+    height: 896px;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 155px;
+    left: calc(50% - 75px);
+    transform: translateX(-100%);
+  }
+
+  &__content {
+    position: absolute;
+    top: 86px;
+    left: calc(50% + 15px);
+    width: 474px;
+  }
+
+  &__text {
+    color: $second-text-color;
+    font-family: $second-font;
+  }
+
+  &__featureList {
+    padding: 40px 0 40px 60px;
+
+    li {
+      padding: 8px 0;
+      list-style: none;
+      position: relative;
+
+      &::before {
+        content: url(../../../public/img/done-icon.svg);
+        position: absolute;
+        top: 7px;
+        left: -30px;
+      }
+    }
+  }
 }
