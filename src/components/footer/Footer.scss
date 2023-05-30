@@ -137,6 +137,7 @@
 
     select {
       color: $white-color;
+      line-height: inherit;
 
       option {
         color: $main-text-color;

@@ -32,6 +32,12 @@
       }
     }
   },
+  "blog": {
+    "upTitle": "Keep Up With the Latest",
+    "title": "Discover What’s New",
+    "subTitle": "Learn from the experts at iTerms to ensure you stay on top of industry legalities and changing legal landscapes at all times.",
+    "contents": "Categories"
+  },
   "footer": {
     "footer__conversionUpTitle": "Get Started Within Minutes",
     "footer__conversionTitle": "Are You Ready to Protect Your Business?",

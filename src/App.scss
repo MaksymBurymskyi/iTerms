@@ -30,7 +30,26 @@ a {
 .container {
   max-width: 1110px;
   margin: auto;
-  // position: relative;
+}
+
+.page {
+  background: url(../public/img/hero-image-bgd.svg) no-repeat center top / cover
+    $background-color;
+
+  &__upTitle {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    color: $extra-text-color;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 120%;
+    margin: 16px 0;
+  }
 }
 
 .linkStyle {

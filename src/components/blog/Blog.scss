@@ -1,0 +1,55 @@
+@import "../../App.scss";
+
+.blog {
+  padding: 200px 0 180px;
+
+  &__description {
+    max-width: 743px;
+    text-align: center;
+    margin: auto;
+  }
+
+  &__subTitle {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 60px 0;
+    justify-content: space-between;
+    gap: 80px;
+
+    h3,
+    h4 {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__contents {
+    ul {
+      padding: 24px 0 0;
+    }
+
+    li {
+      list-style: none;
+      font-size: 16px;
+      font-family: $second-font;
+      cursor: pointer;
+    }
+  }
+
+  &__articles {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .active {
+    color: $main-color;
+  }
+}

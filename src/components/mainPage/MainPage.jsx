@@ -17,39 +17,13 @@ import { useTranslation } from "react-i18next";
 function MainPage() {
 
   const [t] = useTranslation(["translation"]);
-
-  // const [smth, setSmth] = useState('');
-
-  // useEffect(() => {
-  //   axios.get("http://localhost:3100").then(({ data }) => {
-  //     setSmth(data);
-  //     console.log('data :>> ', data);
-  //   })
-  // }, [])
-
-  // useEffect(() => {
-  //   async function trySmth () {
-  //     try {
-  //       let response = await axios.get("http://localhost:3100");
-  //       console.log(response);
-  //       return response;
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   } ;
-  // },[])
   
-  //  {/* <div>{smth.map((item, index) => (
-  //         <div key={index}>{item}</div>
-  //       ))} </div> */}
-  //   {/* <div>{ smth}</div>  */}
-  
-  return <div className='mainPage'>
+  return <div className='page'>
     <section className='mainSection' id='mainSection'>
       <div className="container">
         <div className="heroText">
-          <p className="mainPage__upTitle">{ t('mainPage.mainSection.heroText__upTitle') }</p>
-          <h1 className="mainPage__title">{ t('mainPage.mainSection.heroText__title') }</h1>
+          <p className="page__upTitle">{ t('mainPage.mainSection.heroText__upTitle') }</p>
+          <h1 className="page__title">{ t('mainPage.mainSection.heroText__title') }</h1>
           <p className="heroText__subTitle">
             {t('mainPage.mainSection.heroText__subTitle', { returnObjects: true })[0]}
             <span className="heroText__subTitle--highlighted"> {t('mainPage.mainSection.heroText__subTitle', { returnObjects: true })[1]} </span>
@@ -87,19 +61,19 @@ function MainPage() {
           <img src={ ContentImage } alt={ t('mainPage.possibilities__image') } />
         </div>
         <div className="possibilities__content">
-          <p className="mainPage__upTitle">
+          <p className="page__upTitle">
             { t('mainPage.possibilities.upTitle') }
           </p>
-          <h2 className="mainPage__title">
+          <h2 className="page__title">
             { t('mainPage.possibilities.title') }
           </h2>
           <p className="possibilities__text">
             { t('mainPage.possibilities.possibilities__text') }
           </p>
           <ul className="possibilities__featureList">
-            { t('mainPage.possibilities.featureList', { returnObjects: true }).map((item, index) => (
+            {/* { t('mainPage.possibilities.featureList', { returnObjects: true }).map((item, index) => (
               <li key={index} className="possibilities__text">{ item }</li>
-            )) }
+            )) } */}
           </ul>
           <BtnsBlock
             style={{ justifyContent: 'start'}}

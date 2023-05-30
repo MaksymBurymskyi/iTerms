@@ -110,7 +110,6 @@ function Footer() {
           <li><Link to="/pricing">{ t("footer.footer__infoLinks.linkList.to-pricing") }</Link></li>
           <li><Link to="/">{ t("footer.footer__infoLinks.linkList.to-policy") }</Link></li>
           <li><Link to="/">{ t("footer.footer__infoLinks.linkList.to-disclaimer") }</Link></li>
-          {/* <li><Link to="/">English version</Link></li> */}
           <li>
             <LanguageSelector
           currLang={ currLang }
