@@ -52,4 +52,35 @@
   .active {
     color: $main-color;
   }
+
+  .pagination {
+    font-family: $second-font;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__pointer {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      padding: 4px 7px;
+
+      &--prev,
+      &--next {
+        padding: 0;
+        margin: 0 8px;
+        fill: $main-link-color;
+      }
+
+      &--next {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .disabled {
+    cursor: auto;
+    fill: $extra-text-color;
+  }
 }

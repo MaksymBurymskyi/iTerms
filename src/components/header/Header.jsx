@@ -71,10 +71,10 @@ export default function Header() {
   }
 
   return <>
-    <header className={`header ${hide && "invisible"} ${!onTopPosition && "notInTop"}`}>
+    <header className={`header ${ hide ? "invisible" : "" } ${ !onTopPosition ? "notInTop" :"" }`}>
       <div className="container">
         <div className="header__logo">
-          <Link  to="/#mainSection">iTerms </Link>
+          <Link  to="/">iTerms </Link>
         </div>
         <nav className="header__menu">
           <NavLink className={({ isActive }) => isActive ? "menuLinkActive" : ""} to="/">

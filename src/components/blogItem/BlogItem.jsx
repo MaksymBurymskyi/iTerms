@@ -1,8 +1,12 @@
 import './BlogItem.scss';
 
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 export default function BlogItem({ id, title, description, category }) {
+
+  const [t] = useTranslation(["translation"]);
+
   
   return <>
     <div className='blogItem' key={ id } >
@@ -15,7 +19,7 @@ export default function BlogItem({ id, title, description, category }) {
           { description }
         </p>
       </div>
-      <Link className='blogItem__link' to={`/blog/${id}`}>Read more<span></span></Link>
+      <Link className='blogItem__link' to={`/blog/${id}`}>{ t('blog.innerItem.link')}<span></span></Link>
     </div>
   </>
 }

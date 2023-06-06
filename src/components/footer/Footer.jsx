@@ -37,7 +37,7 @@ function Footer() {
     }
   }
 
-  return <div className="footer">
+  return <footer className="footer">
     <div className="container">
       <div className="footer__conversion">
         <p className="footer__conversionUpTitle">
@@ -64,7 +64,7 @@ function Footer() {
       </div>
       <div className="footer__mainLinks">
         <div className="footer__textBlock">
-          <h3>iTerms</h3>
+          <h3><Link  to="/">iTerms </Link></h3>
           <p>
             { t('footer.footer__textBlock') }
           </p>
@@ -119,7 +119,7 @@ function Footer() {
         </ul>
       </div>
     </div>
-  </div>
+  </footer>
 
 }
 

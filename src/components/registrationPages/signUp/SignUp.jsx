@@ -1,7 +1,7 @@
 import './SignUp.scss';
 import Button from '../../button/Button';
-import { ReactComponent as IconGoogle } from '../../imgsForComponents/google-color-icon.svg';
-import { ReactComponent as IconFacebook } from '../../imgsForComponents/facebook-color-icon.svg';
+import { ReactComponent as IconGoogle } from '../../../imgs/google-color-icon.svg';
+import { ReactComponent as IconFacebook } from '../../../imgs/facebook-color-icon.svg';
 
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';

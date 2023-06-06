@@ -66,7 +66,7 @@ function App() {
         <Route path='/signin' element={<LogInPage />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/blog/:id' element={<Post />} />
-        <Route exact path='/#mainSection' element={<MainPage />} />
+        {/* <Route exact path='/#mainSection' element={<MainPage />} /> */}
         <Route exact path='/' element={<MainPage />} />
         <Route path='*' element={<Navigate to='/404' />} />
         
