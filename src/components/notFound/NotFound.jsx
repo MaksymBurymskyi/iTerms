@@ -1,8 +1,7 @@
 import './NotFound.scss';
 import Button from '../button/Button';
 import React from "react";
-import Image404 from "../imgsForComponents/404.svg"
-
+import Image404 from "../../imgs/404.svg"
 
 function NotFound() {
     

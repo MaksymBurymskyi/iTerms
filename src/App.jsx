@@ -5,6 +5,8 @@ import RegisterPage from './components/registrationPages/registerPage/RegisterPa
 import LogInPage from './components/registrationPages/logInPage/LogInPage';
 import Footer from './components/footer/Footer';
 import MainPage from './components/mainPage/MainPage';
+import Blog from './components/blog/Blog';
+import Post from './components/post/Post';
 // eslint-disable-next-line no-unused-vars
 import i18n from "./_i18n/i18n";
 
@@ -62,7 +64,9 @@ function App() {
         <Route path='/404' element={<NotFound />} />
         <Route path='/signup' element={<RegisterPage />} />
         <Route path='/signin' element={<LogInPage />} />
-        <Route exact path='/#mainSection' element={<MainPage />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:id' element={<Post />} />
+        {/* <Route exact path='/#mainSection' element={<MainPage />} /> */}
         <Route exact path='/' element={<MainPage />} />
         <Route path='*' element={<Navigate to='/404' />} />
         
