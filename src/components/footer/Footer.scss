@@ -68,6 +68,10 @@
       font-weight: 300;
       font-size: 38px;
       line-height: 120%;
+
+      a {
+        color: $white-color;
+      }
     }
 
     p {
@@ -137,6 +141,7 @@
 
     select {
       color: $white-color;
+      line-height: inherit;
 
       option {
         color: $main-text-color;

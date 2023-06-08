@@ -37,7 +37,7 @@ function Footer() {
     }
   }
 
-  return <div className="footer">
+  return <footer className="footer">
     <div className="container">
       <div className="footer__conversion">
         <p className="footer__conversionUpTitle">
@@ -64,7 +64,7 @@ function Footer() {
       </div>
       <div className="footer__mainLinks">
         <div className="footer__textBlock">
-          <h3>iTerms</h3>
+          <h3><Link  to="/">iTerms </Link></h3>
           <p>
             { t('footer.footer__textBlock') }
           </p>
@@ -110,7 +110,6 @@ function Footer() {
           <li><Link to="/pricing">{ t("footer.footer__infoLinks.linkList.to-pricing") }</Link></li>
           <li><Link to="/">{ t("footer.footer__infoLinks.linkList.to-policy") }</Link></li>
           <li><Link to="/">{ t("footer.footer__infoLinks.linkList.to-disclaimer") }</Link></li>
-          {/* <li><Link to="/">English version</Link></li> */}
           <li>
             <LanguageSelector
           currLang={ currLang }
@@ -120,7 +119,7 @@ function Footer() {
         </ul>
       </div>
     </div>
-  </div>
+  </footer>
 
 }
 

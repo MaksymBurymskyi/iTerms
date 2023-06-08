@@ -1,6 +1,10 @@
 {
   "mainPage":{
     "heroImages":["example document", "line-decoration", "line-decoration", "paper plane", "document", "cookie", "lock"],
-    "possibilities__image": "appropriate visual to the content"
+    "possibilities__image": "appropriate visual to the content",
+    "post": {
+      "body": "image to the article",
+      "author": "author"
+    } 
   }
 }
