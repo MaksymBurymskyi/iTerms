@@ -63,6 +63,11 @@ function Blog() {
     });
   }, []);
 
+  // // повертає перегляд на початок блоку з блогами при зміні сторінки в пагінації
+  // useEffect(() => {
+  //   window.scrollTo(0, 100);
+  // }, [page]);
+
   // заповнення масиву блогів
   useEffect(() => {
     axios.get(urlBlogsData).then(({ data }) => setBlogsData(data));
@@ -132,7 +137,7 @@ function Blog() {
               </ul>
             </div>
             <PostsBlock
-              // category={filter}
+              category={filter}
               quantity={lastContentIndex}
               start={firstContentIndex}></PostsBlock>
           </div>

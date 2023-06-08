@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const usePagination = ({ contentPerPage, count }) => {
-
+  // стан сторінки пагінації
   const [page, setPage] = useState(1);
 
   // стан для відображення крапок в ряду пагінації
@@ -20,9 +20,10 @@ const usePagination = ({ contentPerPage, count }) => {
   // індекс першого елементу сторінки
   const firstContentIndex = lastContentIndex - contentPerPage;
 
+  // створює масив сторінок для розрахунку відображення між стрілками пагінації
   useEffect(() => {
     if (pageCount) {
-      const temp = new Array(pageCount).fill(1).map((_, i) => i + 1 );
+      const temp = new Array(pageCount).fill(1).map((_, i) => i + 1);
       setPagesInBetween(temp);
     }
   }, [pageCount]);
@@ -35,12 +36,8 @@ const usePagination = ({ contentPerPage, count }) => {
     let after = false;
     if (page === 1) {
       paginationGroup = pagesInBetween.slice(0, 3);
-    }
-    else if (
-      page === pageCount ||
-      page === pageCount - 1
-      ) {
-        paginationGroup = pagesInBetween.slice(-3, pageCount);
+    } else if (page === pageCount || page === pageCount - 1) {
+      paginationGroup = pagesInBetween.slice(-3, pageCount);
     } else {
       paginationGroup = [page - 1, page, page + 1];
     }
@@ -60,9 +57,14 @@ const usePagination = ({ contentPerPage, count }) => {
     setGaps({ paginationGroup, before, after });
   }, [page, pagesInBetween, pageCount]);
 
+  // повертає перегляд на початок блоку з блогами при зміні сторінки в пагінації
+  useEffect(() => {
+    window.scrollTo(0, 100);
+  }, [page]);
+
   // функція змінює поточну сторінку при переключенні
-  const changePage = (direction) => {
-    setPage((state) => {
+  const changePage = direction => {
+    setPage(state => {
       if (direction) {
         if (state === pageCount) {
           return state;
@@ -78,7 +80,7 @@ const usePagination = ({ contentPerPage, count }) => {
   };
 
   // функція встановлює сторінки до стану
-  const setCurrPage = (num) => {
+  const setCurrPage = num => {
     if (num > pageCount) {
       setPage(pageCount);
     } else if (num < 1) {
