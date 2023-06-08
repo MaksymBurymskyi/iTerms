@@ -62,15 +62,15 @@ function Post() {
                     <div className='post__author'>
                       <div>
                         <p className='post__authorName'>
-                          {postData.author.name}
+                          {/* {postData.author.name} */}
                         </p>
                         <p className='post__authorPosition'>
-                          {postData.author.position}
+                          {/* {postData.author.position} */}
                         </p>
                       </div>
                       <div className='post__authorAvatar'>
                         <img
-                          src={postData.author.avatar}
+                          // src={postData.author.avatar}
                           alt={e('mainPage.post.author')}
                         />
                       </div>
@@ -141,7 +141,7 @@ function Post() {
             <h2 className='post__title'>{t('blog.post.previewTitle')}</h2>
             <PostsBlock
               addClass={'post__block'}
-              category={postData.category.title}
+              // category={postData.category.title}
               quantity={4}
               start={0}></PostsBlock>
           </div>
