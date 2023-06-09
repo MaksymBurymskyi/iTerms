@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .langSelector {
   display: flex;
@@ -13,6 +13,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: none;
   }
 
   select {
@@ -24,5 +25,10 @@
     padding-right: 30px;
     text-transform: capitalize;
     cursor: pointer;
+
+    option {
+      background-color: $light-gray-color;
+      color: $main-color;
+    }
   }
 }
