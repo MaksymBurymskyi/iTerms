@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .footer {
   width: 100%;
@@ -44,7 +44,7 @@
     position: relative;
 
     &::after {
-      content: url("../../../public/img/suffix-right-icon.png");
+      content: url('../../../public/img/suffix-right-icon.png');
       width: 24px;
       height: 24px;
       position: absolute;
@@ -134,18 +134,15 @@
   }
 
   .langSelector {
+    padding: 3px 0;
+
     &::after {
-      content: url("../../../public/img/suffix-bottom-icon--white.svg");
+      content: url('../../../public/img/suffix-bottom-icon--white.svg');
       right: 10px;
     }
 
     select {
       color: $white-color;
-      line-height: inherit;
-
-      option {
-        color: $main-text-color;
-      }
     }
   }
 }

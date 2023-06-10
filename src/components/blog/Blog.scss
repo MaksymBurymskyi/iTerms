@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .blog {
   padding: 200px 0 180px;
@@ -37,6 +37,7 @@
       font-size: 16px;
       font-family: $second-font;
       cursor: pointer;
+      width: max-content;
     }
   }
 
