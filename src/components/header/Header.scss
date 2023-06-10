@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .header {
   position: fixed;
@@ -32,7 +32,7 @@
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         width: 0;
         height: 2px;
         transition: width 0.4s;
@@ -64,7 +64,7 @@
 
   .langSelector {
     &::after {
-      content: url("../../../public/img/suffix-bottom-icon--green.svg");
+      content: url('../../../public/img/suffix-bottom-icon--green.svg');
       z-index: -1;
       right: 6px;
     }
@@ -82,4 +82,22 @@
     background: url(../../../public/img/sign-up-bgd.png) top center / cover
       #b5bfd9;
   }
+}
+
+@media (max-width: 1200px) {
+}
+
+/* ---- medium ---- */
+
+@media (max-width: 992px) {
+}
+
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
 }

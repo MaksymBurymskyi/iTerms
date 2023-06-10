@@ -1,4 +1,4 @@
-@import "./../../App.scss";
+@import './../../App.scss';
 
 .registration {
   background: url(../../../public/img/sign-up-bgd.png) no-repeat center bottom /
@@ -10,6 +10,7 @@
   &__wrapper {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: nowrap;
     margin-bottom: 70px;
   }
@@ -25,5 +26,75 @@
     background: $main-color;
     width: calc(100% - 478px);
     border-radius: 0 8px 8px 0;
+  }
+}
+
+/* ---- media query ---- */
+/* ---- large screen ---- */
+
+@media (max-width: 1200px) {
+  .registration {
+    &__wrapper {
+      margin-bottom: 60px;
+      min-height: 78vh;
+    }
+    &__form {
+      width: 468px;
+      padding: 45px 0 0 84px;
+    }
+  }
+}
+
+/* ---- medium ---- */
+
+@media (max-width: 992px) {
+  .registration {
+    &__wrapper {
+      margin-bottom: 50px;
+    }
+    &__form {
+      width: 380px;
+      padding: 45px 0 0 63px;
+    }
+    &__canvas {
+      width: calc(100% - 390px);
+    }
+  }
+}
+
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+  .registration {
+    &__form {
+      width: 300px;
+      padding: 45px 0 0 24px;
+    }
+    &__canvas {
+      width: calc(100% - 305px);
+    }
+  }
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .registration {
+    &__form {
+      width: 320px;
+      padding: 45px 0 0 34px;
+      border-radius: 8px;
+    }
+    &__canvas {
+      display: none;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .registration {
+    &__form {
+      width: 300px;
+      padding: 45px 0 0 24px;
+    }
   }
 }

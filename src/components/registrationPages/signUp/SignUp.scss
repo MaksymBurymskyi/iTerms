@@ -1,4 +1,4 @@
-@import "./../../../App.scss";
+@import './../../../App.scss';
 
 .formBlock {
   display: flex;
@@ -19,7 +19,7 @@
     width: 250px;
 
     label {
-      font-family: "Open Sans";
+      font-family: 'Open Sans';
       font-weight: 400;
       font-size: 12px;
       line-height: 120%;
@@ -69,7 +69,7 @@
     }
 
     div {
-      font-family: "Open Sans";
+      font-family: 'Open Sans';
       display: flex;
       flex-direction: row;
       padding: 8px 0 0;
@@ -88,6 +88,32 @@
 
     & a {
       color: $main-color;
+    }
+  }
+}
+
+/* ---- media query ---- */
+/* ---- large screen ---- */
+
+@media (max-width: 1200px) {
+}
+
+/* ---- medium ---- */
+
+@media (max-width: 992px) {
+}
+
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .formBlock__btnsText {
+    & a {
+      display: block;
     }
   }
 }
