@@ -134,6 +134,8 @@
   }
 
   .langSelector {
+    padding: 3px 0;
+
     &::after {
       content: url('../../../public/img/suffix-bottom-icon--white.svg');
       right: 10px;
