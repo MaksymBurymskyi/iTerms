@@ -1,9 +1,8 @@
-import RegistrationPages from "../RegistrationPages";
-import SignUp from "../signUp/SignUp";
-
+import RegistrationPages from '../RegistrationPages';
+import SignUp from '../signUp/SignUp';
 
 function RegisterPage() {
-  return <RegistrationPages formPage={<SignUp/>}></RegistrationPages>
+  return <RegistrationPages formPage={<SignUp />}></RegistrationPages>;
 }
 
 export default RegisterPage;

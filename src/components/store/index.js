@@ -1,14 +1,14 @@
-import { legacy_createStore } from "redux";
+import { legacy_createStore } from 'redux';
 
-const languageReducer = (state = { language: "en" }, action) => {
-  if (action.type === "setUk") {
+const languageReducer = (state = { language: 'en' }, action) => {
+  if (action.type === 'setUk') {
     return {
-      language: "uk",
+      language: 'uk',
     };
   }
-  if (action.type === "setEn") {
+  if (action.type === 'setEn') {
     return {
-      language: "en",
+      language: 'en',
     };
   }
   return state;

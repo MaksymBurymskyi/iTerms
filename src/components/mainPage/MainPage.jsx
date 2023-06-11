@@ -16,32 +16,60 @@ import { useTranslation } from 'react-i18next';
 
 function MainPage() {
   const [t] = useTranslation(['translation']);
-  const [e] = useTranslation(['translation']);
+  const [e] = useTranslation(['extraTr']);
 
   const [isLoading, setIsLoading] = useState(false);
   const [featureList, setFeatureList] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const arr = await t('mainPage.possibilities.featureList', {
-        returnObjects: true,
-      });
-      setFeatureList(arr);
+    const fetchData = () => {
+      // const arr = t('mainPage.possibilities.featureList', {
+      //   returnObjects: true,
+      // });
+      // if (arr.length) {
+      setFeatureList(
+        t('mainPage.possibilities.featureList', {
+          returnObjects: true,
+        }),
+      );
+      console.log('useEffect :>> ', featureList);
       setIsLoading(true);
+      // }
+      // console.log('arr.length :>> ', arr.length);
     };
 
     fetchData();
   }, [t]);
 
   function renderFeatureList() {
+    console.log('isLoading :>> ', isLoading);
     if (isLoading) {
-      return featureList.map((item, index) => (
+      console.log('typeof featureList :>> ', typeof featureList);
+      console.log('featureList :>> ', featureList);
+      console.log('rendering :>> ', 'rendering');
+      return featureList?.map((item, index) => (
         <li key={index} className='possibilities__text'>
           {item}
         </li>
       ));
     }
   }
+
+  // function renderFeatureList() {
+  //   return setTimeout(() => {
+  //     // console.log('isLoading :>> ', isLoading);
+  //     // if (isLoading) {
+  //     //   console.log('rendering :>> ', 'rendering');
+  //     //   return featureList.map((item, index) => (
+  //     //     <li key={index} className='possibilities__text'>
+  //     //       {item}
+  //     //     </li>
+  //     //   ));
+  //     // }
+  //     console.log('setTimeout :>> ', 'starting');
+  //     return afterHoldRender();
+  //   }, 500);
+  // }
 
   return (
     <main>

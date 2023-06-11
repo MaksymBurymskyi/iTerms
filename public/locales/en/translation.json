@@ -1,38 +1,113 @@
 {
   "error": "Download error",
-  "header":{
-    "header__menu":{
+
+  "notFound": {
+    "title": "Oops! Page Nod Found",
+    "description": "Numerous legal agreements accessible at the touch of your fingerprints for your website or mobile app.",
+    "button": "Back to Home"
+  },
+
+  "signIn": {
+    "title": "Sign in",
+    "text": ["Sign in with", "or"],
+    "redirect": ["Don't have an account? ", "Sign up"],
+    "form": {
+      "labelEmail": "Email",
+      "placeholderEmail": "Enter the Email",
+      "requiredEmail": "Email Address is required",
+      "patternEmail": "Invalid Email Address",
+      "labelPassword": "Password",
+      "placeholderPassword": "At least 8 characters long",
+      "requiredPassword": "Password is required",
+      "minLengthPassword": "Password is too short",
+      "passwordLink": "Forgot Password"
+    },
+    "buttons": {
+      "signIn": "Sign in"
+    }
+  },
+
+  "signUp": {
+    "title": "Sign up",
+    "text": "Sign up with",
+    "agreementLinks": [
+      "By proceeding, I agree with the ",
+      "Terms of Service",
+      " and ",
+      "Privacy & Policy"
+    ],
+    "redirect": ["Already have an account? ", "Log in"],
+    "form": {
+      "labelName": "Your Name",
+      "placeholderName": "Your Name",
+      "requiredName": "Name is required",
+      "patternName": "Numbers is prohibited",
+      "minLengthName": "Name must be longer",
+      "labelEmail": "Email",
+      "placeholderEmail": "Enter the Email",
+      "requiredEmail": "Email Address is required",
+      "patternEmail": "Invalid Email Address",
+      "labelPassword": "Password",
+      "placeholderPassword": "At least 8 characters long",
+      "requiredPassword": "Password is required",
+      "minLengthPassword": "Password is too short"
+    },
+    "buttons": {
+      "signUp": "Create account"
+    }
+  },
+
+  "header": {
+    "header__menu": {
       "to-main": "Generate",
       "to-contacts": "Contact us",
       "to-pricing": "Pricing",
       "to-blog": "Blog"
     },
-    "header__buttons":{
+    "header__buttons": {
       "to-signin": "Log in",
       "to-signup": "Sign up"
     }
   },
-  "mainPage":{
-    "mainSection":{
+
+  "mainPage": {
+    "mainSection": {
       "heroText__upTitle": "Powered By AI",
       "heroText__title": "The smartest, fastest way to Legal Aggrements",
-      "heroText__subTitle": ["Generate your", "Privacy Policy, Terms of Use", "or", "Cookie Policy", "for", "free"],
+      "heroText__subTitle": [
+        "Generate your",
+        "Privacy Policy, Terms of Use",
+        "or",
+        "Cookie Policy",
+        "for",
+        "free"
+      ],
       "BtnsBlock": {
         "btnText": "Generate for free",
         "linkText": "Learn more"
       }
     },
-    "possibilities":{
+    "possibilities": {
       "upTitle": "Discover Possibilities",
       "title": "Streamline Your Purpose with AI",
       "possibilities__text": "Streamline cost-effective solutions for your business. Generate legally compliant documents seamlessly with customizable agreements and policies for your website or mobile app anytime, anywhere with iTerms.",
-      "featureList": ["Unlimited downloads for 9.95 a one-time fee", "All legal agreements confirmed by a practicing lawyer", "EU/US and main privacy laws covered", "Automatic legal updates powered by AI", "Industry-leading competitive pricing", "Securely host your policies on our platform", "Easy embed policy on your domain", "Suitable for most Web/Mobile apps"],
+      "featureList": [
+        "Unlimited downloads for 9.95 a one-time fee",
+        "All legal agreements confirmed by a practicing lawyer",
+        "EU/US and main privacy laws covered",
+        "Automatic legal updates powered by AI",
+        "Industry-leading competitive pricing",
+        "Securely host your policies on our platform",
+        "Easy embed policy on your domain",
+        "Suitable for most Web/Mobile apps"
+      ],
       "BtnsBlock": {
         "btnText": "Generate",
         "linkText": "Learn more"
       }
     }
   },
+
   "blog": {
     "upTitle": "Keep Up With the Latest",
     "title": "Discover What’s New",
@@ -50,6 +125,7 @@
       "previewTitle": "Related Post"
     }
   },
+
   "footer": {
     "footer__conversionUpTitle": "Get Started Within Minutes",
     "footer__conversionTitle": "Are You Ready to Protect Your Business?",
@@ -78,5 +154,4 @@
       }
     }
   }
- 
 }
