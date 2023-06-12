@@ -127,6 +127,15 @@
   },
 
   "footer": {
+    "narrowScreen": {
+      "footer__conversionUpTitle": "Latest blog articles",
+      "footer__conversionTitle": "Ready to protect your business?",
+      "footer__conversionSubTitle": "More than 140,000 businesses use iTerms. Join our community of amazing companies!",
+      "BtnsBlock": {
+        "btnText": "Sign me Up!",
+        "linkText": "Learn more"
+      }
+    },
     "footer__conversionUpTitle": "Get Started Within Minutes",
     "footer__conversionTitle": "Are You Ready to Protect Your Business?",
     "footer__conversionSubTitle": "Sign up for our account packages and start generating legal agreements suited to your business needs.",

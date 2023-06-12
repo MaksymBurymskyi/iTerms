@@ -65,34 +65,9 @@ a {
 }
 
 /* ---- media query ---- */
-/* ---- large screen ---- */
 
 @media (max-width: 1200px) {
   .container {
-    width: 980px;
-  }
-}
-
-/* ---- medium ---- */
-
-@media (max-width: 992px) {
-  .container {
-    max-width: 758px;
-  }
-}
-
-/* ---- small ---- */
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 470px;
-  }
-}
-
-/* ---- extra small ---- */
-
-@media (max-width: 480px) {
-  .container {
-    max-width: 320px;
+    width: 96%;
   }
 }
