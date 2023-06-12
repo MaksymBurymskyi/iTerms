@@ -127,6 +127,15 @@
   },
 
   "footer": {
+    "narrowScreen": {
+      "footer__conversionUpTitle": "Найактуальніші статті",
+      "footer__conversionTitle": "Готові захистити свій бізнес?",
+      "footer__conversionSubTitle": "Понад 140 000 компаній використовують iTerms. Приєднуйтесь до нашої дивовижної спільноти!",
+      "BtnsBlock": {
+        "btnText": "Зареєструйтесь!",
+        "linkText": "Дізнатися більше"
+      }
+    },
     "footer__conversionUpTitle": "Почніть роботу за лічені хвилини",
     "footer__conversionTitle": "Чи готові ви захистити свій бізнес?",
     "footer__conversionSubTitle": "Підпишіться на наші пакети облікових записів і почніть створювати юридичні угоди, які відповідають потребам вашого бізнесу.",
