@@ -1,0 +1,184 @@
+@import '../../App.scss';
+
+.burgerBtn {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+  cursor: pointer;
+
+  &-active {
+    display: flex;
+  }
+
+  &-disable {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background: $main-text-color;
+    border-radius: 1.5px;
+    transition: all 0.4s linear;
+  }
+
+  &:focus {
+    border: 0.5px solid $main-text-color;
+  }
+
+  &:hover span {
+    background-color: $main-color;
+  }
+
+  .checked {
+    &:nth-child(1) {
+      animation: burger-checked-1 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-checked-1 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+    }
+
+    &:nth-child(2) {
+      animation: burger-checked-2 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-checked-2 {
+      0% {
+        width: 20px;
+      }
+      100% {
+        width: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      animation: burger-checked-3 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-checked-3 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(315deg) translate(6px, -6px);
+      }
+    }
+  }
+
+  .unchecked {
+    &:nth-child(1) {
+      animation: burger-unchecked-1 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-unchecked-1 {
+      0% {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+    &:nth-child(2) {
+      animation: burger-unchecked-2 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-unchecked-2 {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      animation: burger-unchecked-3 0.4s linear alternate forwards;
+    }
+
+    @keyframes burger-unchecked-3 {
+      0% {
+        transform: rotate(315deg) translate(6px, -6px);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+/* ---- media query ---- */
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .burgerBtn {
+    gap: 3px;
+    span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      border-radius: 1px;
+    }
+  }
+  .checked {
+    @keyframes burger-checked-1 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(45deg) translate(3.6px, 3.6px);
+      }
+    }
+    @keyframes burger-checked-2 {
+      0% {
+        width: 18px;
+      }
+      100% {
+        width: 0;
+      }
+    }
+    @keyframes burger-checked-3 {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(315deg) translate(3.6px, -3.6px);
+      }
+    }
+  }
+  .unchecked {
+    @keyframes burger-unchecked-1 {
+      0% {
+        transform: rotate(45deg) translate(3.6px, 3.6px);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+    @keyframes burger-unchecked-2 {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 18px;
+      }
+    }
+    @keyframes burger-unchecked-3 {
+      0% {
+        transform: rotate(315deg) translate(3.6px, -3.6px);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+  }
+}

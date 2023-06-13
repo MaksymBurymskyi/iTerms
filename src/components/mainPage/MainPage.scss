@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .mainSection {
   height: 920px;
@@ -62,6 +62,7 @@
   left: calc(50% - 555px);
   top: 0;
   z-index: 9;
+  animation: appears-hero 0.8s linear 0.3s alternate forwards;
 
   &__subTitle {
     font-weight: 300;
@@ -72,6 +73,17 @@
 
     &--highlighted {
       font-weight: 600;
+    }
+  }
+
+  @keyframes appears-hero {
+    from {
+      opacity: 0;
+      left: -555px;
+    }
+    to {
+      left: calc(50% - 555px);
+      opacity: 1;
     }
   }
 }
