@@ -32,7 +32,7 @@ function MainPage() {
           returnObjects: true,
         }),
       );
-      console.log('useEffect :>> ', featureList);
+      // console.log('useEffect :>> ', featureList);
       setIsLoading(true);
       // }
       // console.log('arr.length :>> ', arr.length);
@@ -194,7 +194,7 @@ function MainPage() {
                 {t('mainPage.possibilities.possibilities__text')}
               </p>
               <ul className='possibilities__featureList'>
-                {renderFeatureList()}
+                {/* {renderFeatureList()} */}
               </ul>
               <BtnsBlock
                 style={{ justifyContent: 'start' }}

@@ -5,21 +5,28 @@
   top: 0px;
   left: 0;
   right: 0;
-  transition: top 0.3s ease-in-out;
+  margin: auto;
+  transition: top 0.4s ease-in-out;
   width: 100%;
   z-index: 99;
   padding: 26px 0 8px 0;
   color: $main-text-color;
 
+  &__menuWrapper,
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
     font-weight: 300;
     font-size: 38px;
     line-height: 46px;
+  }
+
+  &__menuWrapper {
+    width: 75%;
   }
 
   &__menu {
@@ -52,8 +59,66 @@
   }
 
   &__menu a:hover,
-  &__buttons a:hover {
+  &__buttons a:hover,
+  &__mobileLinksWrap a:hover {
     color: $main-color;
+  }
+
+  &__mobile {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: left 0.4s ease-in-out;
+
+    &--hidden {
+      left: -110%;
+    }
+  }
+
+  &__mobileBgd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    background: $light-gray-color;
+  }
+
+  &__mobileLinks {
+    padding: 12px 30px 12px 16px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &::after {
+      content: url('../../../public/img/suffix-bottom-icon--green.svg');
+      position: absolute;
+      right: 0px;
+      top: 12px;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__mobileLinksWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 12px 32px;
+    position: absolute;
+    top: 32px;
+    right: -32px;
+
+    a {
+      display: inline-block;
+      width: max-content;
+      padding: 8px;
+    }
   }
 
   .menuLinkActive {
@@ -65,11 +130,11 @@
   .langSelector {
     &::after {
       content: url('../../../public/img/suffix-bottom-icon--green.svg');
-      z-index: -1;
       right: 6px;
     }
 
     select {
+      padding: 0 30px 0 16px;
       color: $main-text-color;
     }
   }
@@ -79,17 +144,31 @@
   }
 
   &.notInTop {
-    background: url(../../../public/img/sign-up-bgd.png) top center / cover
-      #b5bfd9;
+    background: url(../../../public/img/sign-up-bgd.png) top center / cover;
   }
 }
 
-@media (max-width: 1200px) {
-}
-
+/* ---- media query ---- */
 /* ---- medium ---- */
 
 @media (max-width: 992px) {
+  .header {
+    &__menu {
+      margin-top: 78px;
+      align-items: baseline;
+      flex-direction: column;
+    }
+    .menuLinkActive {
+      color: $main-color;
+      &::after {
+        width: 0;
+      }
+    }
+    .langSelector {
+      position: absolute;
+      bottom: 48px;
+    }
+  }
 }
 
 /* ---- small ---- */

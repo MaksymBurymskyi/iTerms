@@ -65,6 +65,7 @@
       "to-blog": "Блог"
     },
     "header__buttons": {
+      "account": "Акаунт",
       "to-signin": "Зайти",
       "to-signup": "Реєстрація"
     }
