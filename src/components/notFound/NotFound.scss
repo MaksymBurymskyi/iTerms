@@ -1,12 +1,11 @@
-@import "../../App.scss";
+@import '../../App.scss';
 
 .notFound {
   width: 100vw;
   height: 100vh;
   padding: 17vh 5px 0px;
   text-align: center;
-  background: url(../../../public/img/lines404.svg) center top / contain
-      no-repeat,
+  background: url(../../../public/img/lines404.svg) 45% -220px / cover no-repeat,
     url(../../../public/img/image-bgd404.svg) center top/ 100% no-repeat;
 
   img {
@@ -24,5 +23,47 @@
     color: $second-text-color;
     padding: 8px;
     margin: 0 auto 40px;
+  }
+}
+/* ---- media query ---- */
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+  .notFound {
+    padding: 14vh 5px 0px;
+
+    background: url(../../../public/img/lines404.svg) 40% -280px / cover no-repeat,
+      url(../../../public/img/image-bgd404.svg) center top/ 100% no-repeat;
+    img {
+      height: 30vh;
+    }
+    h2 {
+      font-size: 36px;
+      padding: 40px 8px 8px;
+    }
+    p {
+      width: 464px;
+    }
+  }
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .notFound {
+    padding: 11vh 5px 0px;
+
+    background: url(../../../public/img/lines404.svg) 36% -300px / cover no-repeat,
+      url(../../../public/img/image-bgd404.svg) center top/ 100% no-repeat;
+    img {
+      height: 20vh;
+    }
+    h2 {
+      font-size: 32px;
+      padding: 30px 8px 8px;
+    }
+    p {
+      width: 300px;
+    }
   }
 }

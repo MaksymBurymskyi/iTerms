@@ -59,7 +59,6 @@
   }
 
   &__mainLinks {
-    display: flex;
     padding: 120px 0 48px;
   }
 
@@ -81,13 +80,15 @@
     }
   }
 
-  &__textBlock,
   &__infoLinks span {
     width: 38%;
   }
 
   &__linksBlock {
-    padding-left: 13px;
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 45% 1fr 1fr 1fr;
 
     h4 {
       font-size: 24px;
@@ -98,6 +99,7 @@
 
   &__infoLinks {
     display: flex;
+    justify-content: space-between;
     line-height: 150%;
     border-top: solid 1px $white-color;
 
@@ -123,7 +125,6 @@
 
   &__linkList--column {
     margin-top: 24px;
-    width: 208px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -131,6 +132,8 @@
 
   &__linkList--row {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .langSelector {
@@ -138,11 +141,84 @@
 
     &::after {
       content: url('../../../public/img/suffix-bottom-icon--white.svg');
-      right: 10px;
+      left: 140px;
     }
 
     select {
       color: $white-color;
+    }
+  }
+}
+
+/* ---- media query ---- */
+/* ---- large screen ---- */
+
+@media (max-width: 1200px) {
+  .footer {
+    &__linksBlock {
+      grid-template-columns: 38% 1fr 1fr 1fr;
+    }
+  }
+}
+
+/* ---- medium ---- */
+
+@media (max-width: 992px) {
+  .footer {
+    &__linksBlock {
+      grid-template-columns: repeat(4, auto);
+    }
+    &__infoLinks span {
+      width: 99%;
+    }
+  }
+}
+
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+  .footer {
+    &__conversion {
+      padding: 32px 5%;
+    }
+    &__conversionUpTitle {
+      width: 280px;
+      margin: 0 auto 10px;
+    }
+    &__conversionTitle {
+      font-size: 24px;
+      width: 262px;
+    }
+    &__conversionSubTitle {
+      margin: 10px auto 24px;
+      width: 90%;
+    }
+    &__mainLinks {
+      padding: 60px 0 48px;
+    }
+    &__textBlock {
+      h3 {
+        font-size: 24px;
+      }
+    }
+    &__linksBlock {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+  }
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .footer {
+    &__linkList {
+      margin: 16px 0 0;
+    }
+    h3,
+    h4 {
+      font-size: 18px;
     }
   }
 }
