@@ -90,8 +90,11 @@
     },
     "possibilities": {
       "upTitle": "Discover Possibilities",
+      "upMobileTitle": "Take a look",
       "title": "Streamline Your Purpose with AI",
+      "mobileTitle": "AI + ITerms to do better",
       "possibilities__text": "Streamline cost-effective solutions for your business. Generate legally compliant documents seamlessly with customizable agreements and policies for your website or mobile app anytime, anywhere with iTerms.",
+      "possibilities__mobileText": "Create a seamless payment experience for your customers while using leading technology that adapts to any business, industry, platform, or shopper journey. You’ll be up and running quickly, able to add payment methods easily and increase your conversion rates. Enjoy flexible features to fit your business with a single integration:",
       "featureList": [
         "Unlimited downloads for 9.95 a one-time fee",
         "All legal agreements confirmed by a practicing lawyer",
@@ -101,6 +104,13 @@
         "Securely host your policies on our platform",
         "Easy embed policy on your domain",
         "Suitable for most Web/Mobile apps"
+      ],
+      "shortFeatureList": [
+        "Confirmed by a lawyer",
+        "Legal updates with AI",
+        "The cheapest among competitors",
+        "Clear and understandable",
+        "We host it for you"
       ],
       "BtnsBlock": {
         "btnText": "Generate",
