@@ -61,6 +61,16 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    isBurgerChecked
+      ? document.body.classList.add('no-scroll')
+      : document.body.classList.remove('no-scroll');
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isBurgerChecked]);
+
   //масив мов на сторінці, передається до компоненту вибору мови для відображення значень
   const languages = ['en', 'uk'];
 

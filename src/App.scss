@@ -64,6 +64,11 @@ a {
   color: $main-color;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+  max-height: 100vh;
+}
+
 /* ---- media query ---- */
 
 @media (max-width: 1200px) {
