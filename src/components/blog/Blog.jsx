@@ -1,6 +1,5 @@
 /* eslint-disable array-callback-return */
 import './Blog.scss';
-// import BlogItem from '../blogItem/BlogItem';
 import PostsBlock from '../postsBlock/PostsBlock';
 import usePagination from '../../hooks/usePagination';
 import { ReactComponent as Arrow } from '../../imgs/suffix-left-icon.svg';
@@ -8,6 +7,7 @@ import { ReactComponent as Arrow } from '../../imgs/suffix-left-icon.svg';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Blog() {
   // хук для перекладу i18n
@@ -19,8 +19,11 @@ function Blog() {
   const [filteredBlogs, setFilteredBlogs] = useState([]);
   const [totalCategoryCount, setTotalCategoryCount] = useState();
 
+  // перевірка ширини екрану
+  const isExtraSmall = useMediaQuery('(max-width:480px)');
   // кількість постів на сторінці
-  const quantity = 9;
+  const quantity = isExtraSmall ? 6 : 9;
+
   // хук для керування пагінацією
   const {
     firstContentIndex,
