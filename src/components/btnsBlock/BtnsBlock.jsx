@@ -2,6 +2,7 @@ import './BtnsBlock.scss';
 import Button from '../button/Button';
 
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 function BtnsBlock({
   direction,

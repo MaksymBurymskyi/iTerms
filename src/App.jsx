@@ -7,13 +7,12 @@ import Footer from './components/footer/Footer';
 import MainPage from './components/mainPage/MainPage';
 import Blog from './components/blog/Blog';
 import Post from './components/post/Post';
+import ScrollToTop from './scrollToTop/ScrollToTop';
 // eslint-disable-next-line no-unused-vars
 import i18n from './_i18n/i18n';
-import ScrollToTop from './scrollToTop/ScrollToTop';
 
 import WebFont from 'webfontloader';
-import { useEffect } from 'react';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter,
   Routes,

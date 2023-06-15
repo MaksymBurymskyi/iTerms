@@ -10,16 +10,24 @@ import Lock from '../../imgs/mainPage/lock.svg';
 import ContentImage from '../../imgs/mainPage/content-image.svg';
 import Device from '../../imgs/mainPage/devices.svg';
 
-// import axios from 'axios';
-// import { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { useInView } from 'react-intersection-observer';
 
 function MainPage() {
   // хуки для відображення тексту залежно від обраної мови
   const [t] = useTranslation(['translation']);
   const [e] = useTranslation(['extraTr']);
+
+  // хуки для відстеження попадання компонентів у поле зору
+  const ref1 = useRef(null);
+  const [content, inView1] = useInView(ref1, {});
+  const ref2 = useRef(null);
+  const [list, inView2] = useInView(ref2, {});
+  const ref3 = useRef(null);
+  const [btnsBlock, inView3] = useInView(ref3, {});
 
   // перевірка ширини екрану для відображення блоків
   const isMobile = useMediaQuery('(max-width:992px)');
@@ -183,36 +191,45 @@ function MainPage() {
               )}
             </div>
             <div className='possibilities__content'>
-              <p className='page__upTitle'>
-                {isSmall
-                  ? t('mainPage.possibilities.upMobileTitle')
-                  : t('mainPage.possibilities.upTitle')}
-              </p>
-              <h2 className='page__title'>
-                {isSmall
-                  ? t('mainPage.possibilities.mobileTitle')
-                  : t('mainPage.possibilities.title')}
-              </h2>
-              <p className='possibilities__text'>
-                {isSmall
-                  ? t('mainPage.possibilities.possibilities__mobileText')
-                  : t('mainPage.possibilities.possibilities__text')}
-              </p>
-              <ul className='possibilities__featureList'>
-                {isMobile ? renderShortFeatureList() : renderFeatureList()}
-              </ul>
-              <BtnsBlock
-                style={{ justifyContent: 'start' }}
-                direction={'row'}
-                addBtnClass={'mainBtn'}
-                btnStyle={{ padding: '12px 32px' }}
-                btnTo={'/signup'}
-                btnText={t('mainPage.possibilities.BtnsBlock.btnText')}
-                linkStyle={{ padding: '12px 4px 12px 16px' }}
-                linkTo={'/pricing'}
-                linkText={t(
-                  'mainPage.possibilities.BtnsBlock.linkText',
-                )}></BtnsBlock>
+              <div className={inView1 ? 'onView' : 'nonView'} ref={content}>
+                <p className='page__upTitle'>
+                  {isSmall
+                    ? t('mainPage.possibilities.upMobileTitle')
+                    : t('mainPage.possibilities.upTitle')}
+                </p>
+                <h2 className='page__title'>
+                  {isSmall
+                    ? t('mainPage.possibilities.mobileTitle')
+                    : t('mainPage.possibilities.title')}
+                </h2>
+                <p className='possibilities__text'>
+                  {isSmall
+                    ? t('mainPage.possibilities.possibilities__mobileText')
+                    : t('mainPage.possibilities.possibilities__text')}
+                </p>
+              </div>
+              <div
+                className={inView2 ? 'onViewBottom' : 'nonViewBottom'}
+                ref={list}>
+                <ul className='possibilities__featureList'>
+                  {isMobile ? renderShortFeatureList() : renderFeatureList()}
+                </ul>
+              </div>
+              <div
+                className={inView3 ? 'onViewLeft' : 'nonViewLeft'}
+                ref={btnsBlock}>
+                <BtnsBlock
+                  style={{ justifyContent: 'start' }}
+                  direction={'row'}
+                  addBtnClass={'mainBtn'}
+                  btnStyle={{ padding: '12px 32px' }}
+                  btnTo={'/signup'}
+                  btnText={t('mainPage.possibilities.BtnsBlock.btnText')}
+                  linkStyle={{ padding: '12px 4px 12px 16px' }}
+                  linkTo={'/pricing'}
+                  linkText={t('mainPage.possibilities.BtnsBlock.linkText')}
+                />
+              </div>
             </div>
           </div>
         </section>

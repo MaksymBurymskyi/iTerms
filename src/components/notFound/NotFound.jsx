@@ -1,8 +1,8 @@
 import './NotFound.scss';
 import Button from '../button/Button';
-import React from 'react';
 import Image404 from '../../imgs/404.svg';
 
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function NotFound() {
