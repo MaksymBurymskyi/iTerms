@@ -1,4 +1,5 @@
 import './RegistrationPages.scss';
+import React from 'react';
 
 function RegistrationPages({ formPage }) {
   return (
