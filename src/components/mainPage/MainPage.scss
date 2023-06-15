@@ -137,6 +137,34 @@
   }
 }
 
+.nonView {
+  opacity: 0.1;
+}
+.onView {
+  transition: all 3s ease-in-out;
+  opacity: 1;
+}
+.nonViewLeft {
+  transition: all 1s ease-in-out;
+  opacity: 0.3;
+  transform: translate(-50vw);
+}
+.onViewLeft {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  transform: translate(0);
+}
+.nonViewBottom {
+  transition: all 1s ease-in-out;
+  opacity: 0.3;
+  transform: translateY(100%);
+}
+.onViewBottom {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ---- media query ---- */
 /* ---- large screen ---- */
 
