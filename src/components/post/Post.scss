@@ -111,3 +111,44 @@
     margin-top: 60px;
   }
 }
+
+/* ---- media query ---- */
+/* ---- medium ---- */
+
+@media (max-width: 992px) {
+  .post {
+    &__wrapper {
+      flex-direction: column-reverse;
+      padding: 160px 4px 48px;
+    }
+    &__body {
+      width: 100%;
+    }
+    &__preview {
+      text-align: center;
+    }
+  }
+}
+
+/* ---- small ---- */
+
+@media (max-width: 768px) {
+  .post {
+    &__wrapper {
+      gap: 50px;
+    }
+  }
+}
+
+/* ---- extra small ---- */
+
+@media (max-width: 480px) {
+  .post {
+    &__wrapper {
+      gap: 30px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+  }
+}
