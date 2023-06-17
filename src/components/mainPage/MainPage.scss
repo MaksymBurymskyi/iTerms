@@ -141,11 +141,10 @@
   opacity: 0.1;
 }
 .onView {
-  transition: all 3s ease-in-out;
+  transition: all 2s ease-in-out;
   opacity: 1;
 }
 .nonViewLeft {
-  transition: all 1s ease-in-out;
   opacity: 0.3;
   transform: translate(-50vw);
 }
@@ -154,15 +153,14 @@
   opacity: 1;
   transform: translate(0);
 }
-.nonViewBottom {
-  transition: all 1s ease-in-out;
+.nonViewRight {
   opacity: 0.3;
-  transform: translateY(100%);
+  transform: translate(40vw);
 }
-.onViewBottom {
+.onViewRight {
   transition: all 1s ease-in-out;
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0);
 }
 
 /* ---- media query ---- */
