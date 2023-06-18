@@ -25,15 +25,18 @@ export default function Header() {
 
   // хук для відправки значення обраної мови до глобального сховища
   const dispatchFunc = useDispatch();
-  // отримання поточної встановленої мови зі сховища
-  const currLanguage = useSelector(state => state.language);
-  // стан для відображення поточної мови у компоненті
-  const [currLang, setCurrLang] = useState('en');
+  // // отримання поточної встановленої мови зі сховища
+  // const currLanguage = useSelector(state => state.language);
+  // // стан для відображення поточної мови у компоненті
+  // const [currLang, setCurrLang] = useState('en');
+
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   // хук керування станом поточної мови
-  useEffect(() => {
-    setCurrLang(currLanguage);
-  }, [currLanguage]);
+  // useEffect(() => {
+  //   setCurrLang(currLanguage);
+  // }, [currLanguage]);
 
   // хук відповідає за відображення хедеру. Приховує при скролі вниз і показує при скролі уверх
   useEffect(() => {
@@ -103,7 +106,7 @@ export default function Header() {
         }`}>
         <div className='container'>
           <div className='header__logo' onClick={hidesMenu}>
-            <Link to='/'>iTerms </Link>
+            <Link to={`/${currentLanguage}/`}>iTerms </Link>
           </div>
           <div
             className={`burgerBtn ${
@@ -127,7 +130,7 @@ export default function Header() {
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'menuLinkActive' : '')}
-                to={`/${currLanguage}/contacts`}>
+                to={`/${currentLanguage}/contacts`}>
                 {t('header.header__menu.to-contacts')}
               </NavLink>
               <NavLink
@@ -137,12 +140,13 @@ export default function Header() {
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'menuLinkActive' : '')}
-                to='/blog'>
+                // to='/blog'>
+                to={`/${currentLanguage}/blog`}>
                 {t('header.header__menu.to-blog')}
               </NavLink>
             </nav>
             <LanguageSelector
-              currLang={currLang}
+              currLang={currentLanguage}
               options={languages}
               changeOption={onChangeLanguage}
             />

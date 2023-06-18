@@ -16,6 +16,8 @@ function Post() {
   // хуки для перекладу i18n
   const [t] = useTranslation(['translation']);
   const [e] = useTranslation(['extraTr']);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   // хуки зберігають інформацію про завантаження посту
   const [postData, setPostData] = useState({});
   const [error, setError] = useState(false);
@@ -83,17 +85,20 @@ function Post() {
               <h2>{t('blog.post.contentsTitle')}</h2>
               <ul>
                 <li>
-                  <HashLink to={`/blog/${params.id}#description`}>
+                  <HashLink
+                    to={`/${currentLanguage}/blog/${params.id}?cat=${postData.category?.title}#description`}>
                     {t('blog.post.description')}
                   </HashLink>
                 </li>
                 <li>
-                  <HashLink to={`/blog/${params.id}#text`}>
+                  <HashLink
+                    to={`/${currentLanguage}/blog/${params.id}?cat=${postData.category?.title}#text`}>
                     {t('blog.post.text')}
                   </HashLink>
                 </li>
                 <li>
-                  <HashLink to={`/blog/${params.id}#author`}>
+                  <HashLink
+                    to={`/${currentLanguage}/blog/${params.id}?cat=${postData.category?.title}#author`}>
                     {t('blog.post.author')}
                   </HashLink>
                 </li>

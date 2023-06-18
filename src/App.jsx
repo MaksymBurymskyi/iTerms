@@ -21,6 +21,7 @@ import {
   Navigate,
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   // мова зі сховища
@@ -44,10 +45,33 @@ function App() {
   function onChangeLanguage(language) {
     i18n.changeLanguage(language);
   }
+  // поточна мова в бібліотеці i18n
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  useEffect(() => {
+    let currentPath = window.location.pathname.split('/');
+
+    currentPath.forEach((item, i) => {
+      if (item == 'en') currentPath[i] = currentLanguage;
+      if (item == 'uk') currentPath[i] = currentLanguage;
+    });
+
+    const newPath = currentPath.join('/');
+
+    // змінюємо шлях за допомогою history
+    window.history.pushState(null, '', newPath);
+  }, [currentLanguage]);
 
   function Contacts() {
     return <div>Contacts</div>;
   }
+
+  // function MainPagePath() {
+  //   const location = useLocation();
+
+  //   return location.pathname === '/';
+  // }
 
   //функція повертає футер за виключенням вказаних шляхів
   function FooterComponent() {
@@ -66,16 +90,25 @@ function App() {
         <Header />
         <ScrollToTop>
           <Routes>
-            {/* <Route path={`/${language}/contacts`} element={<Contacts />} /> */}
+            <Route
+              path={`/${currentLanguage}/contacts`}
+              element={<Contacts />}
+            />
             <Route path={`/contacts`} element={<Contacts />} />
             <Route path='/404' element={<NotFound />} />
             <Route path='/signup' element={<RegisterPage />} />
             <Route path='/signin' element={<LogInPage />} />
+            <Route path={`/en/blog`} element={<Blog />} />
+            <Route path={`/uk/blog`} element={<Blog />} />
             {/* <Route path={`/${language}/blog`} element={<Blog />} /> */}
-            <Route path={`/blog`} element={<Blog />} />
-            <Route path='/blog/:id' element={<Post />} />
-            <Route exact path='/' element={<MainPage />} />
-            <Route path='*' element={<Navigate to='/404' />} />
+            <Route path='/en/blog/:id' element={<Post />} />
+            <Route path={`/uk/blog/:id`} element={<Post />} />
+            {/* <Route path={MainPagePath} element={<MainPage />} /> */}
+            <Route path='/uk/' element={<MainPage />} />
+            <Route path='/en/' element={<MainPage />} />
+
+            {/* <Route exact path='/' element={<MainPage />} /> */}
+            {/* <Route path='*' element={<Navigate to='/404' />} /> */}
           </Routes>
           <Routes>
             <Route path='*' element={<FooterComponent />} />
