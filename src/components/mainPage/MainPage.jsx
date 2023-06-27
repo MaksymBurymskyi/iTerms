@@ -1,5 +1,8 @@
 import './MainPage.scss';
 import BtnsBlock from '../btnsBlock/BtnsBlock';
+import MiddleBlock from '../middleBlock/MiddleBlock';
+import PostsBlock from '../postsBlock/PostsBlock';
+import Button from '../button/Button';
 import HeroImage from '../../imgs/mainPage/hero-image.svg';
 import LineGrey from '../../imgs/mainPage/line-gray.svg';
 import LineViolet from '../../imgs/mainPage/line-violet.svg';
@@ -28,6 +31,8 @@ function MainPage() {
   const [list, inView2] = useInView(ref2, {});
   const ref3 = useRef(null);
   const [btnsBlock, inView3] = useInView(ref3, {});
+  const ref4 = useRef(null);
+  const [content2, inView4] = useInView(ref4, {});
 
   // перевірка ширини екрану для відображення блоків
   const isMobile = useMediaQuery('(max-width:992px)');
@@ -231,6 +236,39 @@ function MainPage() {
                 />
               </div>
             </div>
+          </div>
+        </section>
+        <MiddleBlock />
+        <section className='news'>
+          <div
+            className={`container news__wrapp ${
+              inView4 ? 'onView' : 'nonView'
+            }`}
+            ref={content2}>
+            <div className='news__content'>
+              <p className='page__upTitle'>
+                {isSmall
+                  ? t('mainPage.news.upMobileTitle')
+                  : t('mainPage.news.upTitle')}
+              </p>
+              <h2 className='page__title'>
+                {isSmall
+                  ? t('mainPage.news.mobileTitle')
+                  : t('mainPage.news.title')}
+              </h2>
+              <p className='possibilities__text'>
+                {isSmall
+                  ? t('mainPage.news.subMobileTitle')
+                  : t('mainPage.news.subTitle')}
+              </p>
+            </div>
+            <PostsBlock category={'All'} quantity={4} start={0}></PostsBlock>
+            <Button
+              addClass={'mainBtn'}
+              style={{ padding: '12px 32px' }}
+              to={'/blog'}>
+              {t('mainPage.news.button')}
+            </Button>
           </div>
         </section>
       </div>
