@@ -119,6 +119,18 @@
     }
   },
 
+  "middleBlock": {
+    "upTitle": "Trusted Provisions",
+    "upMobileTitle": "Can Trust",
+    "title": "Secure Legal Safeguards",
+    "mobileTitle": "Legal Protection You",
+    "subTitle": "Attorney-certified compliance solutions for your convenience and protection.",
+    "subMobileTitle": "Create a free terms and conditions agreement (aka terms of use or terms of service) for your website or app",
+    "policies": "Policies Created",
+    "businesses": "Businesses",
+    "views": "Compliant Pageviews"
+  },
+
   "blog": {
     "upTitle": "Keep Up With the Latest",
     "title": "Discover What’s New",

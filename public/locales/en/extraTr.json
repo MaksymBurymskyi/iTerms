@@ -15,5 +15,10 @@
       "body": "image to the article",
       "author": "author"
     }
+  },
+
+  "middleBlock": {
+    "shield": "shield with shadow",
+    "checkpoint": "checkpoin icon"
   }
 }

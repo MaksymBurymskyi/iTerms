@@ -127,7 +127,7 @@ export default function Header() {
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'menuLinkActive' : '')}
-                to={`/${currLanguage}/contacts`}>
+                to={`/${currLang}/contacts`}>
                 {t('header.header__menu.to-contacts')}
               </NavLink>
               <NavLink
@@ -137,7 +137,8 @@ export default function Header() {
               </NavLink>
               <NavLink
                 className={({ isActive }) => (isActive ? 'menuLinkActive' : '')}
-                to='/blog'>
+                // to={`/${currLang}/blog`}>
+                to={`/blog`}>
                 {t('header.header__menu.to-blog')}
               </NavLink>
             </nav>
