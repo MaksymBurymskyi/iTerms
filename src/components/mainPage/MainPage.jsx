@@ -39,6 +39,7 @@ function MainPage() {
   const isSmall = useMediaQuery('(max-width:768px)');
   const isExtraSmall = useMediaQuery('(max-width:480px)');
 
+  // функція для відображення списку особливостей
   function renderFeatureList() {
     const list = isMobile
       ? t('mainPage.possibilities.shortFeatureList', {
