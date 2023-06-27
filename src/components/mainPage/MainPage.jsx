@@ -1,8 +1,5 @@
 import './MainPage.scss';
 import BtnsBlock from '../btnsBlock/BtnsBlock';
-import MiddleBlock from '../middleBlock/MiddleBlock';
-import PostsBlock from '../postsBlock/PostsBlock';
-import Button from '../button/Button';
 import HeroImage from '../../imgs/mainPage/hero-image.svg';
 import LineGrey from '../../imgs/mainPage/line-gray.svg';
 import LineViolet from '../../imgs/mainPage/line-violet.svg';
@@ -31,8 +28,6 @@ function MainPage() {
   const [list, inView2] = useInView(ref2, {});
   const ref3 = useRef(null);
   const [btnsBlock, inView3] = useInView(ref3, {});
-  const ref4 = useRef(null);
-  const [content2, inView4] = useInView(ref4, {});
 
   // перевірка ширини екрану для відображення блоків
   const isMobile = useMediaQuery('(max-width:992px)');
@@ -41,15 +36,34 @@ function MainPage() {
 
   // функція для відображення списку особливостей
   function renderFeatureList() {
-    const list = isMobile
-      ? t('mainPage.possibilities.shortFeatureList', {
+    if (
+      Array.isArray(
+        t('mainPage.possibilities.featureList', {
           returnObjects: true,
-        })
-      : t('mainPage.possibilities.featureList', {
+        }),
+      )
+    ) {
+      return t('mainPage.possibilities.featureList', {
+        returnObjects: true,
+      })?.map((item, index) => (
+        <li key={index} className='possibilities__text'>
+          {item}
+        </li>
+      ));
+    }
+  }
+
+  function renderShortFeatureList() {
+    if (
+      Array.isArray(
+        t('mainPage.possibilities.shortFeatureList', {
           returnObjects: true,
-        });
-    if (Array.isArray(list)) {
-      return list.map((item, index) => (
+        }),
+      )
+    ) {
+      return t('mainPage.possibilities.shortFeatureList', {
+        returnObjects: true,
+      }).map((item, index) => (
         <li key={index} className='possibilities__text'>
           {item}
         </li>
@@ -196,10 +210,10 @@ function MainPage() {
                 </p>
               </div>
               <div
-                className={inView2 ? 'onViewRight' : 'nonViewRight'}
+                className={inView2 ? 'onViewBottom' : 'nonViewBottom'}
                 ref={list}>
                 <ul className='possibilities__featureList'>
-                  {renderFeatureList()}
+                  {isMobile ? renderShortFeatureList() : renderFeatureList()}
                 </ul>
               </div>
               <div
@@ -220,6 +234,7 @@ function MainPage() {
             </div>
           </div>
         </section>
+
         <MiddleBlock />
         <section className='news'>
           <div
@@ -256,6 +271,7 @@ function MainPage() {
             </Button>
           </div>
         </section>
+
       </div>
     </main>
   );

@@ -116,28 +116,7 @@
         "btnText": "Generate",
         "linkText": "Learn more"
       }
-    },
-    "news": {
-      "upTitle": "Keep Up With the Latest",
-      "upMobileTitle": "Latest blog articles",
-      "title": "Discover What’s New",
-      "mobileTitle": "What’s New?",
-      "subTitle": "Learn from the experts at iTerms to ensure you stay on top of industry legalities and changing legal landscapes at all times.",
-      "subMobileTitle": "More than 140,000 businesses use iTerms. Join our community of amazing companies!",
-      "button": "Read More"
     }
-  },
-
-  "middleBlock": {
-    "upTitle": "Trusted Provisions",
-    "upMobileTitle": "Can Trust",
-    "title": "Secure Legal Safeguards",
-    "mobileTitle": "Legal Protection You",
-    "subTitle": "Attorney-certified compliance solutions for your convenience and protection.",
-    "subMobileTitle": "Create a free terms and conditions agreement (aka terms of use or terms of service) for your website or app",
-    "policies": "Policies Created",
-    "businesses": "Businesses",
-    "views": "Compliant Pageviews"
   },
 
   "blog": {
