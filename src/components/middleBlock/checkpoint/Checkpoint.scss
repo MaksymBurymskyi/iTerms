@@ -1,0 +1,35 @@
+@import '../../../App.scss';
+
+.checkPoint {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__value {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 120%;
+    margin: 16px 0;
+  }
+
+  &__descr {
+    font-family: $second-font;
+  }
+}
+
+/* ---- media query ---- */
+/* ---- large screen ---- */
+
+@media (max-width: 992px) {
+  .checkPoint {
+    align-items: center;
+    &__value {
+      font-size: 24px;
+      margin: 16px 0 8px;
+    }
+  }
+}
