@@ -2,11 +2,8 @@ import './BlogItem.scss';
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-// import { useSelector } from 'react-redux';
 
 export default function BlogItem({ id, title, description, category }) {
-  // мова зі сховища та переклад
-  // const language = useSelector(state => state.language);
   const [t] = useTranslation(['translation']);
 
   return (
@@ -19,7 +16,7 @@ export default function BlogItem({ id, title, description, category }) {
           <h4>{title}</h4>
           <p>{description}</p>
         </div>
-        <Link className='blogItem__link' to={`/blog/${id}?cat=${category}`}>
+        <Link className='blogItem__link' to={`/blog/${id}?${category}`}>
           {t('blog.innerItem.link')}
           <span></span>
         </Link>
