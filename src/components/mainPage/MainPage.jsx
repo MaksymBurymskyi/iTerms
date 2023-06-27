@@ -35,15 +35,34 @@ function MainPage() {
   const isExtraSmall = useMediaQuery('(max-width:480px)');
 
   function renderFeatureList() {
-    const list = isMobile
-      ? t('mainPage.possibilities.shortFeatureList', {
+    if (
+      Array.isArray(
+        t('mainPage.possibilities.featureList', {
           returnObjects: true,
-        })
-      : t('mainPage.possibilities.featureList', {
+        }),
+      )
+    ) {
+      return t('mainPage.possibilities.featureList', {
+        returnObjects: true,
+      })?.map((item, index) => (
+        <li key={index} className='possibilities__text'>
+          {item}
+        </li>
+      ));
+    }
+  }
+
+  function renderShortFeatureList() {
+    if (
+      Array.isArray(
+        t('mainPage.possibilities.shortFeatureList', {
           returnObjects: true,
-        });
-    if (Array.isArray(list)) {
-      return list.map((item, index) => (
+        }),
+      )
+    ) {
+      return t('mainPage.possibilities.shortFeatureList', {
+        returnObjects: true,
+      }).map((item, index) => (
         <li key={index} className='possibilities__text'>
           {item}
         </li>
@@ -190,10 +209,10 @@ function MainPage() {
                 </p>
               </div>
               <div
-                className={inView2 ? 'onViewRight' : 'nonViewRight'}
+                className={inView2 ? 'onViewBottom' : 'nonViewBottom'}
                 ref={list}>
                 <ul className='possibilities__featureList'>
-                  {renderFeatureList()}
+                  {isMobile ? renderShortFeatureList() : renderFeatureList()}
                 </ul>
               </div>
               <div

@@ -71,10 +71,9 @@ function App() {
             <Route path='/404' element={<NotFound />} />
             <Route path='/signup' element={<RegisterPage />} />
             <Route path='/signin' element={<LogInPage />} />
-            <Route path={`/${language}/blog`} element={<Blog />} />
+            {/* <Route path={`/${language}/blog`} element={<Blog />} /> */}
             <Route path={`/blog`} element={<Blog />} />
-            <Route path={`/${language}/blog/:id`} element={<Post />} />
-            <Route path={`/blog/:id`} element={<Post />} />
+            <Route path='/blog/:id' element={<Post />} />
             <Route exact path='/' element={<MainPage />} />
             <Route path='*' element={<Navigate to='/404' />} />
           </Routes>
