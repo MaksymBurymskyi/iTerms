@@ -244,7 +244,10 @@ function MainPage() {
                   : t('mainPage.news.subTitle')}
               </p>
             </div>
-            <PostsBlock category={'All'} quantity={4} start={0}></PostsBlock>
+            <PostsBlock
+              category={'All'}
+              quantity={isExtraSmall ? 3 : 4}
+              start={0}></PostsBlock>
             <Button
               addClass={'mainBtn'}
               style={{ padding: '12px 32px' }}
