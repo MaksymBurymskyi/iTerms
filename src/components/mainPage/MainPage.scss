@@ -163,6 +163,7 @@
   opacity: 1;
 }
 .nonViewLeft {
+  transition: all 1s ease-in-out;
   opacity: 0.3;
   transform: translate(-50vw);
 }
@@ -171,14 +172,15 @@
   opacity: 1;
   transform: translate(0);
 }
-.nonViewRight {
+.nonViewBottom {
+  transition: all 1s ease-in-out;
   opacity: 0.3;
-  transform: translate(40vw);
+  transform: translateY(100%);
 }
-.onViewRight {
+.onViewBottom {
   transition: all 1s ease-in-out;
   opacity: 1;
-  transform: translate(0);
+  transform: translateY(0);
 }
 
 /* ---- media query ---- */

@@ -83,20 +83,17 @@ function Post() {
               <h2>{t('blog.post.contentsTitle')}</h2>
               <ul>
                 <li>
-                  <HashLink
-                    to={`/blog/${params.id}?cat=${postData.category?.title}#description`}>
+                  <HashLink to={`/blog/${params.id}#description`}>
                     {t('blog.post.description')}
                   </HashLink>
                 </li>
                 <li>
-                  <HashLink
-                    to={`/blog/${params.id}?cat=${postData.category?.title}#text`}>
+                  <HashLink to={`/blog/${params.id}#text`}>
                     {t('blog.post.text')}
                   </HashLink>
                 </li>
                 <li>
-                  <HashLink
-                    to={`/blog/${params.id}?cat=${postData.category?.title}#author`}>
+                  <HashLink to={`/blog/${params.id}#author`}>
                     {t('blog.post.author')}
                   </HashLink>
                 </li>

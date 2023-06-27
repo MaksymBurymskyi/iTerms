@@ -17,7 +17,7 @@ export default function BlogItem({ id, title, description, category }) {
           <h4>{title}</h4>
           <p>{description}</p>
         </div>
-        <Link className='blogItem__link' to={`/blog/${id}?cat=${category}`}>
+        <Link className='blogItem__link' to={`/blog/${id}?${category}`}>
           {t('blog.innerItem.link')}
           <span></span>
         </Link>
