@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export default function BlogItem({ id, title, description, category }) {
-  // мова зі сховища та переклад
   const [t] = useTranslation(['translation']);
 
   return (
